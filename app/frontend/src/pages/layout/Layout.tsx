@@ -16,6 +16,7 @@ const Layout = () => {
                     <Link to="/" className={styles.headerTitleContainer}>
                         <h3 className={styles.headerTitle}>POC: OpenAI + Enterprise data</h3>
                     </Link>
+                    <h4 className={styles.headerRightText}></h4>
                     <nav>
                         <ul className={styles.headerNavList}>
                             <li>
@@ -42,7 +43,7 @@ const Layout = () => {
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
+
                     {useLogin && <LoginButton />}
                 </div>
             </header>
