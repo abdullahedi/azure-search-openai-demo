@@ -1,6 +1,6 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 
-import github from "../../assets/github.svg";
+import softwareOne from "../../assets/softwareone-logo-rev.svg";
 
 import styles from "./Layout.module.css";
 
@@ -14,7 +14,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <h3 className={styles.headerTitle}>POC: OpenAI + Enterprise data</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -29,14 +29,14 @@ const Layout = () => {
                                 </NavLink>
                             </li>
                             <li className={styles.headerNavLeftMargin}>
-                                <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
+                                <a href="https://www.softwareone.com/en" target={"_blank"} title="softwareone link">
                                     <img
-                                        src={github}
-                                        alt="Github logo"
-                                        aria-label="Link to github repository"
+                                        src={softwareOne}
+                                        alt="SoftwareONE logo"
+                                        aria-label="Link to softwreone website"
                                         width="20px"
                                         height="20px"
-                                        className={styles.githubLogo}
+                                        className={styles.softwareoneLogo}
                                     />
                                 </a>
                             </li>

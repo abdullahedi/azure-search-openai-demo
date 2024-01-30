@@ -56,6 +56,29 @@ async function fetchAuthSetup(): Promise<AuthSetup> {
         throw new Error(`auth setup response was not ok: ${response.status}`);
     }
     return await response.json();
+    // return {
+    //     useLogin: false,
+    //     requireAccessControl: false,
+    //     msalConfig: {
+    //         auth: {
+    //             clientId: "1", // Client app id used for login
+    //             authority: "edi-dir", // Directory to use for login https://learn.microsoft.com/azure/active-directory/develop/msal-client-application-configuration#authority
+    //             redirectUri: "www.google.com", // Points to window.location.origin. You must register this URI on Azure Portal/App Registration.
+    //             postLogoutRedirectUri: "www.detik.com", // Indicates the page to navigate after logout.
+    //             navigateToLoginRequestUrl: false // If "true", will navigate back to the original request location before processing the auth code response.
+    //         },
+    //         cache: {
+    //             cacheLocation: "sessionStorage", // Configures cache location. "sessionStorage" is more secure, but "localStorage" gives you SSO between tabs.
+    //             storeAuthStateInCookie: false // Set this to "true" if you are having issues on IE11 or Edge
+    //         }
+    //     },
+    //     loginRequest: {
+    //         scopes: []
+    //     },
+    //     tokenRequest: {
+    //         scopes: []
+    //     }
+    // };
 }
 
 const authSetup = await fetchAuthSetup();
